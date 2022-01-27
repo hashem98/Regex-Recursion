@@ -1,8 +1,23 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy){
-    // Write you logic here.
-    return;
+    if (dividedBy == 0) 
+    return 0 ;
+else if ( number ==dividedBy )
+    return 1
+    else if( number < dividedBy)
+    if (dividedBy * -1 == number)
+        return -1
+        else if ( number % dividedBy == 0)
+        return 1 + division(number - dividedBy, dividedBy);
+    else
+        return 0
+else
+    if (dividedBy < 0)
+        return 1 - division(number - dividedBy, -dividedBy)
+    else
+        return 1 + division(number - dividedBy, dividedBy)
+    
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
@@ -12,8 +27,11 @@ pow(2,4) = 16
 
 
 function pow(x,n){
-    // Write you logic here.
-    return;
+    if (n != 0)
+    return (x * pow(x, n - 1));
+    else
+        return 1;
+    
 }
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
@@ -23,8 +41,9 @@ Write a function that take n as parameter and return the nth element in the Fibo
 Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n){
-    // Write you logic here.
-    return;
+    if (n <= 1)
+        return n;
+    return fibonacci(n-1) + fibonacci(n-2);
 }
 
 /* Optional 
